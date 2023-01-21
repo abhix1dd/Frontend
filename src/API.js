@@ -2,7 +2,7 @@ import axios from 'axios'
 
 async function hitAPI(url,method='GET', body = {}) {
     // Open a new connection, using the GET request on the URL endpoint
-    url ='http://192.168.1.7:8000/blog' + url
+    url ='https://creepy-teal-tutu.cyclic.app/blog/' + url
     // let data = await fetch(url, {
     //     method: method, // *GET, POST, PUT, DELETE, etc.
     //     })

@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import BlogSpotScreen from "../BlogPostScreen/BlogSpotScreen.js";
 import NewBlogScreen from "../NewBlogScreen/NewBlogScreen.js"
-import logo from './create.jpg' 
+import logo from '../assets/images/saveIcon.png'
 
 function openSelectedBlog(event) {
   console.log(event);
@@ -32,7 +32,9 @@ export default function HomeScreen() {
   }, []);
 
   function closeBlog(){
-    setState('HomeScreen')
+    // document.referrer();
+    window.location.reload(true);
+    // setState('HomeScreen')
   }
 
   return (
