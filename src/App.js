@@ -3,11 +3,10 @@ import './App.css';
 
 
 function App() {
-    // console.log(process.argv);
   return (
-  <div>
+  <div className="maxHeight">
     <div>
-    <div className='header-title'>Eqaim Blog</div>
+    <header className="Header"><h1>Eqaim Blog</h1></header>
     </div>
       <header className="App-header">
           <div className="BlogPostPage">

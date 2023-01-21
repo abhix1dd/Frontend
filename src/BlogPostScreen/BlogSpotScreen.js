@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getBlogList } from "../API.js";
+import homeButtom from '../assets/images/home.png'
 import {
   Button,
   Card,
@@ -14,7 +15,7 @@ function openSelectedBlog(event){
     console.log(event)
 }
 export default function BlogSpotScreen(props) {
-    console.log(props)
+    console.log('Here',props)
   const [blogPageDisplay, setBlogPageDisplay] = useState('');
   useEffect(() => {
     getBlogList(`/${props.id}`)
@@ -29,15 +30,15 @@ export default function BlogSpotScreen(props) {
 
   
   return (
-    <div>
-      {/* <header>Eqaim Blog</header> */}
-      <div className="blog-post">
-      
-  <h2>{blogPageDisplay.title}</h2>
-
-      {/* <h1 className="title">{blogPageDisplay.title}</h1> */}
-      <p className="content">{blogPageDisplay.content}</p>
-    </div>
+    <div className="maxHeight">
+   
+     <div className="modalView FlexBoxRow">
+     <button className="ButtonClass" onClick={()=>{props.closeBlog()}}><img src={homeButtom} className="ImageClass"></img></button>
+      <header className="Header topMargin">{blogPageDisplay.title}</header>
+     </div>
+     <div className="maxHeight FullPage modalView textBox">
+        {blogPageDisplay.content}
+      </div>
     </div>
   );
 }

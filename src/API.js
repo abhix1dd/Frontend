@@ -35,7 +35,7 @@ async function postData(url = '', data = {}) {
 export async function getBlogList (apiUrl,method = 'GET',body = {}) {
     
     let data =  await hitAPI(apiUrl,method,body);
-    console.log('response',data)
+    console.log('response NOW',data)
 
     // let data = ['Blog Post','Blog Post','Blog Post','Blog Post','Blog Post']
     return data;
