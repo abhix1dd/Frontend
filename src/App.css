@@ -36,3 +36,51 @@
     transform: rotate(360deg);
   }
 }
+.FullPage{
+  background-color: #282c34;
+  display: grid;
+  /* grid-auto-rows: 1fr; */
+  grid-template-columns: auto auto auto auto;
+  font-size: calc(10px + 2vmin);
+  color: white;
+
+}
+.BlogPostPage{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+}
+.CardFlex {
+  margin : 0 1% 1% 0 ;
+
+}
+.CardFlexInside {
+  display: flex;
+  border-radius : 3%;
+  background-color: #D9D9D9;
+  margin : 1% ;
+  
+}
+.grid {
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.maxHeight{
+  height : 100%
+}
+.alignBottom{
+  bottom: 0;
+}
+.height25{
+height: 20%;
+}
+.height75{
+height: 75%;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+}
