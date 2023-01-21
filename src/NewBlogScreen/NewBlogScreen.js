@@ -27,7 +27,6 @@ export default function NewBlogScreen(props) {
       console.log("Please Enter Title and Content");
     }
   }
-
   return (
     <div
       className="TwoColumnFlex"
