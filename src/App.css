@@ -130,3 +130,12 @@ width: 100%;
   flex: 0 0 25rem;
   align-items: center;
 }
+.TwoColumnFlex{
+  display: flex;
+  justify-content:first flex-start;
+  width: 100%;
+}
+.TwoColumnFlexSide{
+  display: flex;
+  flex-direction: column;
+}

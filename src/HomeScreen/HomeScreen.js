@@ -22,7 +22,6 @@ export default function HomeScreen() {
   useEffect(() => {
     getBlogList("/")
       .then((response) => {
-        console.log("Inside HomeScreen", response);
         let temp = [];
         // temp = response.map(element=>element.title)
         setBlogPostDisplay(response);
@@ -75,7 +74,7 @@ export default function HomeScreen() {
               
           </div>
           <div>
-                    <img style={{ width: 50, height: 60,position:"fixed",bottom:0,right:0,padding:100 }} src={logo}  alt="Logo" onClick={() => {
+                    <img style={{ width: 50, height: 60,position:"absolute",bottom:0,right:0,paddingRight:50 }} src={logo}  alt="Logo" onClick={() => {
                         setState('NewBlogScreen');
                     }} />
                 </div>
@@ -87,9 +86,10 @@ export default function HomeScreen() {
       </div>
         }
       {state == 'NewBlogScreen' && 
-      <div>
-        <NewBlogScreen />
-      </div>
+      <div className="maxHeight">
+      <NewBlogScreen  closeBlog={closeBlog}/>
+    </div>
+      
         }
     </div>
   );

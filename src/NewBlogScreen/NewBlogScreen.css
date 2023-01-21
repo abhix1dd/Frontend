@@ -2,15 +2,15 @@
 
 .form-box{
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    /* margin-left:20;
+    padding-left: 20px; */
  
-    min-width: 100%;
+    min-width: 20%;
     height: 100vh;
 
     margin: 0vw;
     padding: 5vw ;
-    position:relative; 
+    /* position:relative;  */
   
 }
 
