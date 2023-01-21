@@ -6,7 +6,11 @@ async function hitAPI(url,method='GET', body = {}) {
     // let data = await fetch(url, {
     //     method: method, // *GET, POST, PUT, DELETE, etc.
     //     })
-    let data = await axios.get(url)
+    let data;
+    if(method=="GET")
+     data = await axios.get(url)
+    else
+       data=await axios.post(url,body)
       return data.data;
 // Send reques
 }
@@ -37,3 +41,6 @@ export async function getBlogList (apiUrl,method = 'GET',body = {}) {
     return data;
 
 }
+
+
+

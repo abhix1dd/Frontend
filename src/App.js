@@ -7,7 +7,7 @@ function App() {
   return (
   <div>
     <div>
-    <header>Eqaim Blog</header>
+    <div className='header-title'>Eqaim Blog</div>
     </div>
       <header className="App-header">
           <div className="BlogPostPage">

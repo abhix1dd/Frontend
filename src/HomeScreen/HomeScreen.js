@@ -8,6 +8,9 @@ import {
   Typography,
 } from "@mui/material";
 import BlogSpotScreen from "../BlogPostScreen/BlogSpotScreen.js";
+import NewBlogScreen from "../NewBlogScreen/NewBlogScreen.js"
+import logo from './create.jpg' 
+
 function openSelectedBlog(event) {
   console.log(event);
   return <BlogSpotScreen></BlogSpotScreen>;
@@ -60,15 +63,29 @@ export default function HomeScreen() {
                       </div>
                     </Card>
                   </Button>
+               
+                  {/* <img src={logo}  alt="Logo" /> */}
                 </div>
+                
               );
             })}
+              
           </div>
+          <div>
+                    <img style={{ width: 50, height: 60,position:"fixed",bottom:0,right:0,padding:100 }} src={logo}  alt="Logo" onClick={() => {
+                        setState('NewBlogScreen');
+                    }} />
+                </div>
         </div>
       )}
       {state == 'viewScreen' && 
       <div>
         <BlogSpotScreen id={currentSelected}/>
+      </div>
+        }
+      {state == 'NewBlogScreen' && 
+      <div>
+        <NewBlogScreen />
       </div>
         }
     </div>

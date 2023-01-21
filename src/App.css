@@ -84,3 +84,16 @@ align-items: center;
 justify-content: center;
 width: 100%;
 }
+
+.header-title{
+  float:inline-start;
+  color: black;
+  text-align:left;
+  padding: 12px;
+  padding-left: 50px;
+  text-decoration: none;
+  font-size: 25px; 
+  line-height: 25px;
+  border-radius: 4px;
+  font-weight: 600;
+}

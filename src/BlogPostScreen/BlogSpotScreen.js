@@ -8,6 +8,8 @@ import {
   Typography,
 } from "@mui/material";
 
+import './blogPost.css';
+
 function openSelectedBlog(event){
     console.log(event)
 }
@@ -28,10 +30,14 @@ export default function BlogSpotScreen(props) {
   
   return (
     <div>
-      <header>Eqaim Blog</header>
-      <div className="FullPage">
-        {blogPageDisplay}
-      </div>
+      {/* <header>Eqaim Blog</header> */}
+      <div className="blog-post">
+      
+  <h2>{blogPageDisplay.title}</h2>
+
+      {/* <h1 className="title">{blogPageDisplay.title}</h1> */}
+      <p className="content">{blogPageDisplay.content}</p>
+    </div>
     </div>
   );
 }
