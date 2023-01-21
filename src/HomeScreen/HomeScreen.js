@@ -29,12 +29,15 @@ export default function HomeScreen() {
       });
   }, []);
 
+  function closeBlog(){
+    setState('HomeScreen')
+  }
+
   return (
-    <div>
+    <div className="maxHeight">
       {state == "HomeScreen" && (
-        <div>
-          <header>Eqaim Blog</header>
-          <div className="FullPage">
+        <div className="maxHeight">
+          <div className="FullPage maxHeight">
             {blogListDisplay.map((element, index) => {
               return (
                 <div key={index} className="CardFlex">
@@ -47,7 +50,7 @@ export default function HomeScreen() {
                     }}
                   >
                     <Card
-                      sx={{ minWidth: 275 }}
+                      sx={{ minWidth: 300 , maxWidth : 300, minHeight:300, maxHeight:300}}
                       variant="outlined"
                       className="maxHeight"
                     >
@@ -67,8 +70,8 @@ export default function HomeScreen() {
         </div>
       )}
       {state == 'viewScreen' && 
-      <div>
-        <BlogSpotScreen id={currentSelected}/>
+      <div className="maxHeight">
+        <BlogSpotScreen id={currentSelected} closeBlog={closeBlog}/>
       </div>
         }
     </div>

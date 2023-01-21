@@ -41,6 +41,8 @@
   display: grid;
   /* grid-auto-rows: 1fr; */
   grid-template-columns: auto auto auto auto;
+  /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-rows: repeat(auto, auto);
   font-size: calc(10px + 2vmin);
   color: white;
 
@@ -53,7 +55,7 @@
 }
 .CardFlex {
   margin : 0 1% 1% 0 ;
-
+  height :100%;
 }
 .CardFlexInside {
   display: flex;
@@ -64,8 +66,10 @@
 }
 .grid {
   display: grid;
-  grid-auto-rows: 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(6, 1fr);
+  /* grid-template-rows: repeat(6, 1fr); */
+  grid-column-gap: 2px;
+  grid-row-gap: 2px; 
 }
 
 .maxHeight{
@@ -83,4 +87,43 @@ display: flex;
 align-items: center;
 justify-content: center;
 width: 100%;
+}
+.Header{
+  height: 10vh;
+  background-color: #fff;
+  display: flex;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  width: 100%;
+}
+.topMargin{
+  margin-top: 1%;
+}
+.modalView{
+  width: 80vw;
+  background-color: #fff;
+  color: black;
+}
+.textBox{
+  max-width: fit-content;
+  padding: 0 5% 0 5%;
+  color: #767676;
+}
+.ImageClass{
+  height: 5vh;
+  width: auto;
+  border-radius: 5%;
+  display: flex;
+
+}
+
+.ButtonClass{
+  border: none;
+}
+.FlexBoxRow{
+  display: flex;
+  flex: 0 0 25rem;
+  align-items: center;
 }
