@@ -75,8 +75,8 @@ export default function HomeScreen() {
             })}
               
           </div>
-          <div>
-                    <img style={{ width: 50, height: 60,position:"absolute",bottom:0,right:0,paddingRight:50 }} src={logo}  alt="Logo" onClick={() => {
+          <div className="SaveButton">
+                    <img  style={{height:50, width:50}} src={logo}  alt="Logo" onClick={() => {
                         setState('NewBlogScreen');
                     }} />
                 </div>
